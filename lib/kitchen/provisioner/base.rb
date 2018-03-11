@@ -88,6 +88,7 @@ module Kitchen
           debug("Download complete")
         end
       rescue Kitchen::Transport::TransportFailed => ex
+        info("Action failed.. raise after cleanup.")
         raise ActionFailed, ex.message
       ensure
         cleanup_sandbox
