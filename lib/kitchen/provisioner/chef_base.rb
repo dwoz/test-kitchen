@@ -471,10 +471,10 @@ module Kitchen
             opts[:install_command_options][:checksum] = config[:checksum] if config[:checksum]
           end
 
-          if instance.driver.cache_directory
-            download_dir_option = windows_os? ? :download_directory : :cmdline_dl_dir
-            opts[:install_command_options][download_dir_option] = instance.driver.cache_directory
-          end
+          #if instance.driver.cache_directory
+          #  download_dir_option = windows_os? ? :download_directory : :cmdline_dl_dir
+          #  opts[:install_command_options][download_dir_option] = instance.driver.cache_directory
+          #end
 
           proxies = {}.tap do |prox|
             [:http_proxy, :https_proxy, :ftp_proxy, :no_proxy].each do |key|
