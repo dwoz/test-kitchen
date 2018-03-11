@@ -151,7 +151,7 @@ module Kitchen
         # @return [Winrm::FileManager] a file transporter
         # @api private
         def file_manager
-          @file_manager ||= WinRM::FS::FileManager.new(connection)
+          @file_manager ||= WinRM::FS::FileManager.new(session)
         end
 
         # (see Base::Connection#wait_until_ready)
