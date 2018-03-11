@@ -134,6 +134,7 @@ module Kitchen
 
         # (see Base::Connection#upload)
         def upload(locals, remote)
+          logger.info("upload\n locals=#{locals} \n remote=#{remote}")
           file_transporter.upload(locals, remote)
         end
 
