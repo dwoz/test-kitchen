@@ -47,7 +47,7 @@ module Kitchen
       default_config :connection_retries, 5
       default_config :connection_retry_sleep, 1
       default_config :operation_timeout, 60
-      default_config :receive_timeout, 70
+      default_config :receive_timeout, 120
       default_config :max_wait_until_ready, 600
       default_config :winrm_transport, :negotiate
       default_config :scheme do |transport|
